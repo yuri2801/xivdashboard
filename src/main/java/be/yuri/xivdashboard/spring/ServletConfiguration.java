@@ -35,7 +35,7 @@ public class ServletConfiguration  extends WebMvcConfigurerAdapter {
 		UrlBasedViewResolver viewResolver = new UrlBasedViewResolver();
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/WEB-INF/views/");
-		viewResolver.setSuffix(".jspx");
+		viewResolver.setSuffix(".jsp");
     	//viewResolver.setTemplateEngine(templateEngine());
     	return viewResolver;
 	}
