@@ -14,7 +14,7 @@ app.controller("bodyCtrl", function($scope, serviceAjax, $log, $compile) {
 	$scope.options = {
             cellHeight: 200,
             verticalMargin: 10,
-            resizable: { handles: 'none'}
+            resizable: { handles: 'none',width: 5}
         };
         $scope.addWidget = function() {
             var newWidget = { x:0, y:0, width:1, height:1 };

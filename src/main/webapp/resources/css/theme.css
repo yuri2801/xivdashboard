@@ -89,5 +89,21 @@ img.settings-widget {
 .sidebar .grid-stack-item .grid-stack-item-content {
 	background: none;
 }
+.grid-stack > div.grid-stack-item {
+    min-width: 20%;}
+.grid-stack > div.grid-stack-item[data-gs-x='1'] {left: 20%;}
+.grid-stack > div.grid-stack-item[data-gs-x='2'] {left: 40%;}
+.grid-stack > div.grid-stack-item[data-gs-x='3'] {left: 60%;}
+.grid-stack > div.grid-stack-item[data-gs-x='4'] {left: 80%;}
+.grid-stack > div.grid-stack-item[data-gs-x='5'] {left: 200%;}
+.grid-stack > div.grid-stack-item[data-gs-x='6'] {left: 200%;}
+.grid-stack > div.grid-stack-item[data-gs-x='7'] {left: 200%;}
+.grid-stack > div.grid-stack-item[data-gs-x='8'] {left: 200%;}
+.grid-stack > div.grid-stack-item[data-gs-x='9'] {left: 200%;}
+.grid-stack > div.grid-stack-item[data-gs-x='10'] {left: 200%;}
 
-
+.grid-stack > div.grid-stack-item[data-gs-width='1'] {width: 20%;}
+.grid-stack > div.grid-stack-item[data-gs-width='2'] {width: 40%;}
+.grid-stack > div.grid-stack-item[data-gs-width='3'] {width: 60%;}
+.grid-stack > div.grid-stack-item[data-gs-width='4'] {width: 80%;}
+.grid-stack > div.grid-stack-item[data-gs-width='5'] {width: 100%;}
