@@ -1,14 +1,54 @@
+body {
+	
+}
+
+div {
+	border-radius: 10px;
+}
+
 #content {
 	width: 98%;
 	height: 80%;
-	background: #fad1d6;
+	background: lightgrey;
 	margin: 1%;
+}
+
+img.close-widget {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	float: right;
+	vertical-align: center;
+}
+
+img.settings-widget {
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 3px;
+	vertical-align: center;
+}
+
+.grid-stack-item-bar {
+	background-color: #444444;
+	color: white;
+	height: 20px;
+	vertical-align: center;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.icons {
+	float: right;
+	height: 18px;
+	margin: 1px;
+	vertical-align: center;
 }
 
 .grid-stack-item-content {
 	color: #2c3e50;
 	text-align: center;
 	background-color: #18bc9c;
+	width: 100px;
 }
 
 #grid2 .grid-stack-item-content {
@@ -36,7 +76,7 @@
 
 .sidebar .grid-stack-item {
 	width: 200px;
-	height: 100px;
+	height: 300px;
 	border: 2px dashed green;
 	text-align: center;
 	line-height: 100px;
@@ -49,3 +89,5 @@
 .sidebar .grid-stack-item .grid-stack-item-content {
 	background: none;
 }
+
+

@@ -66,9 +66,11 @@ app.directive('widget', function factory() {
 	        restrict: 'E',
 	        scope: false,
 	        link: function(scope, element, attrs) {
-	            scope.contentUrl = '../templates/' + $scope + '.html';
+	        	scope.contentUrl = '../../resources/templates/' + attrs.type +'.html';
+	//            scope.contentUrl = '../templates/' + $scope + '.html';
 	            attrs.$observe("attrs.type",function(v){
-	                scope.contentUrl = '../templates/' + v + '.html';
+	            	scope.contentUrl = '../../resources/templates/template1.html';
+	            	//    scope.contentUrl = '../templates/' + v + '.html';
 	            });
 	        },
 	        template: '<div ng-include="contentUrl"></div>',

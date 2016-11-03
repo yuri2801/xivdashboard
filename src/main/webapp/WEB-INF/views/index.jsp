@@ -8,8 +8,7 @@
 <c:url value="/resources" var="resources" />
 <link rel="stylesheet" href="${resources }/css/bootstrap.min.css" />
 <link rel="stylesheet" href="${resources }/css/gridstack/gridstack.css" />
-<link rel="stylesheet"
-	href="${resources }/css/gridstack/gridstack-extra.css" />
+<link rel="stylesheet" href="${resources }/css/gridstack/gridstack-extra.css" />
 <link rel="stylesheet" href="${resources }/css/theme.css" />
 
 <script src="${resources }/js/jquery.js"></script>
@@ -27,29 +26,8 @@
 		<h1>Two grids demo</h1>
 
 		<div class="row">
-			<div class="col-md-3">
-				<div class="sidebar">
-					<div class="grid-stack-item">
-						<div class="grid-stack-item-content">Drag me</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-9">
-				<div class="trash">
-					<jsp:text>
-					</jsp:text>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="grid-stack grid-stack-6" id="content"
+			<div class="grid-stack grid-stack-5" id="content"
 				ng-controller="bodyCtrl">
-				<div>
-					<div class="grid-stack-item-content">blabla</div>
-					<div />
-				</div>
-			</div>
 
 			<div class="container-fluid">
 				<h1>gridstack-angular demo</h1>
@@ -74,11 +52,14 @@
 								on-item-removed="onItemRemoved(item)">
 								<div class="grid-stack-item-content">
 									<div class="grid-stack-item-bar">
-										{{c.name}}<a class="btn btn-primary"
-											ng-click="removeWidget(c)" href="#">remove</a>
+										{{c.name}}
+										<div class="icons">
+											<a ng-click="removeWidget(c)" href="#"><img class="settings-widget" src="${resources }/images/settings.svg" /></a>
+											<a ng-click="removeWidget(c)" href="#"><img class="close-widget" src="${resources }/images/cancel.svg" /></a>
+										</div>
 									</div>
 
-									<widget type="c.template">
+									<widget type="{{c.template}}">
 									<div class="grid-stack-item-body">{{c.content}}</div>
 									</widget>
 								</div>
