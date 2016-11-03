@@ -14,7 +14,7 @@ app.controller("bodyCtrl", function($scope, serviceAjax, $log, $compile) {
 	$scope.options = {
             cellHeight: 200,
             verticalMargin: 10,
-            resizable: { handles: 'none',width: 5}
+            resizable: { handles: 'none', width: 5}
         };
         $scope.addWidget = function() {
             var newWidget = { x:0, y:0, width:1, height:1 };
@@ -59,6 +59,8 @@ app.factory('serviceAjax', function serviceAjax($http) {
 			return $http.post("http://127.0.0.1:8080/xivdashboard/s/index/content",data);
 		}
 	}
+});
+app.controller("cont1Ctrl", function($scope, serviceAjax, $log, $compile) {
 });
 
 app.directive('widget', function factory() {

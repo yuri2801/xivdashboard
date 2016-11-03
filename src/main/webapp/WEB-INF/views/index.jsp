@@ -26,7 +26,7 @@
 		<h1>Two grids demo</h1>
 
 		<div class="row">
-			<div class="grid-stack grid-stack-5" id="content"
+			<div class="grid-stack grid-stack-10" id="content"
 				ng-controller="bodyCtrl">
 
 			<div class="container-fluid">
@@ -38,19 +38,19 @@
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-10" id="main-container">
 						<div gridstack class="grid-stack grid1" options="options"
 							on-change="onChange(event,items)"
 							on-drag-start="onDragStart(event,ui)"
 							on-drag-stop="onDragStop(event,ui)"
 							on-resize-start="onResizeStart(event,ui)"
-							on-resize-stop="onResizeStop(event,ui)">
+							on-resize-stop="onResizeStop(event,ui)" data-gs-width="10">
 							<div gridstack-item ng-repeat="c in containers"
 								class="grid-stack-item" gs-item-x="c.x" gs-item-y="c.y"
 								gs-item-width="c.width" gs-item-height="c.height"
 								gs-item-autopos="1" on-item-added="onItemAdded(item)"
 								on-item-removed="onItemRemoved(item)">
-								<div class="grid-stack-item-content">
+								<div class="grid-stack-item-content" ng-controller="c.controller">
 									<div class="grid-stack-item-bar">
 										{{c.name}}
 										<div class="icons">

@@ -5,6 +5,7 @@ public class Container {
 	private String Content;
 	private int x, y, w, h;
 	private String template;
+	private String controller;
 	
 	public String getTemplate() {
 		return template;
@@ -47,6 +48,12 @@ public class Container {
 	}
 	public void setH(int h) {
 		this.h = h;
+	}
+	public String getController() {
+		return controller;
+	}
+	public void setController(String controller) {
+		this.controller = controller;
 	}
 	@Override
 	public String toString() {
