@@ -1,0 +1,15 @@
+<script type="text/ng-template" id="controller1.html">
+<div class="grid-stack-item-bar" ng-controller="cont1Ctrl">
+	{{c.name}}
+	<div class="icons">
+		<a ng-click="removeWidget(c)" href="#"><img
+			class="settings-widget" src="${resources }/images/settings.svg" /></a> <a
+			ng-click="removeWidget(c)" href="#"><img class="close-widget"
+			src="${resources }/images/cancel.svg" /></a>
+	</div>
+</div>
+
+<widget type="{{c.template}}">
+<div class="grid-stack-item-body">{{c.content}}</div>
+</widget>
+</script>

@@ -8,7 +8,8 @@
 <c:url value="/resources" var="resources" />
 <link rel="stylesheet" href="${resources }/css/bootstrap.min.css" />
 <link rel="stylesheet" href="${resources }/css/gridstack/gridstack.css" />
-<link rel="stylesheet" href="${resources }/css/gridstack/gridstack-extra.css" />
+<link rel="stylesheet"
+	href="${resources }/css/gridstack/gridstack-extra.css" />
 <link rel="stylesheet" href="${resources }/css/theme.css" />
 
 <script src="${resources }/js/jquery.js"></script>
@@ -29,39 +30,29 @@
 			<div class="grid-stack grid-stack-10" id="content"
 				ng-controller="bodyCtrl">
 
-			<div class="container-fluid">
-				<h1>gridstack-angular demo</h1>
-				<p>{{containers}}</p>
-				<div>
-					<a class="btn btn-primary" ng-click="addWidget()" href="#">Add
-						Widget</a>
-				</div>
-				<br>
-				<div class="row">
-					<div class="col-md-10" id="main-container">
-						<div gridstack class="grid-stack grid1" options="options"
-							on-change="onChange(event,items)"
-							on-drag-start="onDragStart(event,ui)"
-							on-drag-stop="onDragStop(event,ui)"
-							on-resize-start="onResizeStart(event,ui)"
-							on-resize-stop="onResizeStop(event,ui)" data-gs-width="10">
-							<div gridstack-item ng-repeat="c in containers"
-								class="grid-stack-item" gs-item-x="c.x" gs-item-y="c.y"
-								gs-item-width="c.width" gs-item-height="c.height"
-								gs-item-autopos="1" on-item-added="onItemAdded(item)"
-								on-item-removed="onItemRemoved(item)">
-								<div class="grid-stack-item-content" ng-controller="c.controller">
-									<div class="grid-stack-item-bar">
-										{{c.name}}
-										<div class="icons">
-											<a ng-click="removeWidget(c)" href="#"><img class="settings-widget" src="${resources }/images/settings.svg" /></a>
-											<a ng-click="removeWidget(c)" href="#"><img class="close-widget" src="${resources }/images/cancel.svg" /></a>
-										</div>
-									</div>
-
-									<widget type="{{c.template}}">
-									<div class="grid-stack-item-body">{{c.content}}</div>
-									</widget>
+				<div class="container-fluid">
+					<h1>gridstack-angular demo</h1>
+					<p>{{containers}}</p>
+					<div>
+						<a class="btn btn-primary" ng-click="addWidget()" href="#">Add
+							Widget</a>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-10" id="main-container">
+							<div gridstack class="grid-stack grid1" options="options"
+								on-change="onChange(event,items)"
+								on-drag-start="onDragStart(event,ui)"
+								on-drag-stop="onDragStop(event,ui)"
+								on-resize-start="onResizeStart(event,ui)"
+								on-resize-stop="onResizeStop(event,ui)" data-gs-width="10">
+								<div gridstack-item ng-repeat="c in containers"
+									class="grid-stack-item" gs-item-x="c.x" gs-item-y="c.y"
+									gs-item-width="c.width" gs-item-height="c.height"
+									gs-item-autopos="1" on-item-added="onItemAdded(item)"
+									on-item-removed="onItemRemoved(item)">
+									<div class="grid-stack-item-content" ng-include
+										src="c.template">blabla</div>
 								</div>
 							</div>
 						</div>

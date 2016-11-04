@@ -7,6 +7,9 @@ app.controller("bodyCtrl", function($scope, serviceAjax, $log, $compile) {
 			//$scope.containers = [{ x:0, y:0, width:1, height:1 }, { x:0, y:0, width:3, height:1 }];
 		})		
 	}
+	
+	$scope.controllers = [ cont1Ctrl,  cont1Ctrl ]
+	
 	$scope.pageChanged = function() {
 		loadContainers();
 	}
@@ -60,8 +63,7 @@ app.factory('serviceAjax', function serviceAjax($http) {
 		}
 	}
 });
-app.controller("cont1Ctrl", function($scope, serviceAjax, $log, $compile) {
-});
+
 
 app.directive('widget', function factory() {
 	var directiveDefinitionObject = {
@@ -79,4 +81,7 @@ app.directive('widget', function factory() {
 	        replace: true,
 	    };
 	    return directiveDefinitionObject; 
-})
+});
+
+app.controller("cont1Ctrl",function($scope, serviceAjax, $log, $compile) {
+});

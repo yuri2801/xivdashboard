@@ -39,6 +39,7 @@ public class MainController {
 		cont2.setName("Cont1");
 		cont2.setX(1);cont2.setY(1);cont2.setW(1);cont2.setH(1);
 		cont2.setTemplate("template2");
+		cont2.setController("cont1Ctrl");
 		
 		list.add(cont1);
 		list.add(cont2);
