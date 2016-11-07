@@ -32,13 +32,13 @@ public class MainController {
 		cont1.setContent("Je suis le container 1");
 		cont1.setName("Cont1");
 		cont1.setX(1);cont1.setY(1);cont1.setW(1);cont1.setH(1);
-		cont1.setTemplate("template1");
+		cont1.setTemplate("/xivdashboard/resources/templates/controller1.html");
 		cont1.setController("cont1Ctrl");
 		Container cont2 = new Container();
 		cont2.setContent("Je suis le container 1");
 		cont2.setName("Cont1");
 		cont2.setX(1);cont2.setY(1);cont2.setW(1);cont2.setH(1);
-		cont2.setTemplate("template2");
+		cont2.setTemplate("/xivdashboard/resources/templates/controller1.html");
 		cont2.setController("cont1Ctrl");
 		
 		list.add(cont1);

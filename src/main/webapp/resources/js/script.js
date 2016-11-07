@@ -83,5 +83,7 @@ app.directive('widget', function factory() {
 	    return directiveDefinitionObject; 
 });
 
+function cont1Ctrl(){};
+
 app.controller("cont1Ctrl",function($scope, serviceAjax, $log, $compile) {
 });
